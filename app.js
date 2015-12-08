@@ -8,7 +8,11 @@ app.set('view engine', 'ejs');
 // Get action from the route. So once the route is invoked, pass on the anonymous
 // that takes in a request and gives back a response
 app.get('/', function(req, res){
-  res.render('default');
+  // Passing a js object and vasriable
+  res.render('default', {
+    title: 'Home',
+    users: ['corn', 'dolly', 'mercy', 'pete']
+  });
 });
 //routing to me
 app.get('/me', function(req, res){

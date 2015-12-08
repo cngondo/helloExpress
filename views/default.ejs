@@ -5,7 +5,7 @@
   <title>My App</title>
 </head>
 <body>
-  <h1>Welcome To Express</h1>
+  <h1><%= title %></h1>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique
     condimentum malesuada. Phasellus vehicula turpis ac congue elementum.
@@ -14,6 +14,11 @@
     dapibus posuere. Nam at euismod magna. Proin et ultricies ipsum. Maecenas
     rutrum ligula et rutrum.
   </p>
+  <ul>
+    <% for(var i = 0; i < users.length; i++){ %>
+      <li><%= users[i] %></li>
+    <% } %>
+  </ul>
 
 </body>
 </html>
