@@ -5,7 +5,7 @@
     <% include partials/page/header.ejs %>
 
     <div class="container">
-      <h1><%= title %></h1>
+      <h1><%= pagetitle %><%= title %></h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique
         condimentum malesuada. Phasellus vehicula turpis ac congue elementum.
@@ -14,6 +14,15 @@
         dapibus posuere. Nam at euismod magna. Proin et ultricies ipsum. Maecenas
         rutrum ligula et rutrum.
       </p>
+      <!-- Conditionals to deal with params -->
+      <% if (typeof(users) !== 'undefined'){ %>
+        <ul>
+          <% for (var i = 0; i<users.length; i++){ %>
+            <li> <%= users[i] %> </li>
+          <% } %>
+        </ul>
+      <% } %>
+
     </div>
     <% include partials/page/footer.ejs %>
     <% include partials/page/jsdefaults.ejs %>

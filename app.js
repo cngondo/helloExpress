@@ -3,6 +3,9 @@ var app = express(); //The express app after the dependency declaration in the n
 
 // set the templating engine
 app.set('view engine', 'ejs');
+
+//Passing params to the views
+app.locals.pagetitle = "I am Cornellius";
 // Specify the specific folder
 // app.set('views', __dirname + '/views');
 // Get action from the route. So once the route is invoked, pass on the anonymous
