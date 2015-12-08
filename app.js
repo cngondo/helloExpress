@@ -11,12 +11,16 @@ app.get('/', function(req, res){
   // Passing a js object and vasriable
   res.render('default', {
     title: 'Home',
+    classname: 'home',
     users: ['corn', 'dolly', 'mercy', 'pete']
   });
 });
 //routing to me
-app.get('/me', function(req, res){
-  res.send('@cngondo');
+app.get('/about', function(req, res){
+  res.render('default', {
+    title: 'About Us',
+    classname: 'about'
+  });
 });
 // Passing parameters by name, to the route.
 app.get('/who/:name?', function(req, res){

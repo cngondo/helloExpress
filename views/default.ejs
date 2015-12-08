@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>My App</title>
-</head>
-<body>
-  <h1><%= title %></h1>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique
-    condimentum malesuada. Phasellus vehicula turpis ac congue elementum.
-    Fusce pellentesque purus ut nisl molestie, non tincidunt nisi dictum.
-    Vestibulum gravida sed risus id congue. Pellentesque rutrum sem nec
-    dapibus posuere. Nam at euismod magna. Proin et ultricies ipsum. Maecenas
-    rutrum ligula et rutrum.
-  </p>
-  <ul>
-    <% for(var i = 0; i < users.length; i++){ %>
-      <li><%= users[i] %></li>
-    <% } %>
-  </ul>
+<html lang="en">
+  <head><% include partials/page/head.ejs %></head>
+  <body class="<%= classname %>" >
+    <% include partials/page/header.ejs %>
 
-</body>
+    <div class="container">
+      <h1><%= title %></h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tristique
+        condimentum malesuada. Phasellus vehicula turpis ac congue elementum.
+        Fusce pellentesque purus ut nisl molestie, non tincidunt nisi dictum.
+        Vestibulum gravida sed risus id congue. Pellentesque rutrum sem nec
+        dapibus posuere. Nam at euismod magna. Proin et ultricies ipsum. Maecenas
+        rutrum ligula et rutrum.
+      </p>
+    </div>
+    <% include partials/page/footer.ejs %>
+    <% include partials/page/jsdefaults.ejs %>
+  </body>
 </html>
