@@ -1,10 +1,14 @@
 var express = require('express');
 var app = express(); //The express app after the dependency declaration in the node modules
 
+// set the templating engine
+app.set('view engine', 'ejs');
+// Specify the specific folder
+// app.set('views', __dirname + '/views');
 // Get action from the route. So once the route is invoked, pass on the anonymous
 // that takes in a request and gives back a response
 app.get('/', function(req, res){
-  res.send('<h1>Hello</h1> Express!!');
+  res.render('default');
 });
 //routing to me
 app.get('/me', function(req, res){
